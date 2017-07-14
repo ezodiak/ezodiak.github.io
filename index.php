@@ -8,6 +8,8 @@
 </head>
 <body>
 
+
+<script type="text/javascript" src='https://raw.githubusercontent.com/stevenschobert/instafeed.js/master/instafeed.min.js'></script>
 </body>
 </html>
 
