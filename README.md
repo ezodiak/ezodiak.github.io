@@ -1,1 +1,0 @@
-# ezodiak.github.io
