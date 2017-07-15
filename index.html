@@ -3,18 +3,18 @@
 <head>
 	<title>Ezodiak</title>
 <script>
-	var jumlah = 10;
-	var access_token = "4fad4afac5714459856607a646d61e64";
+	var jumlah = 2;
+	var access_token = '4fad4afac5714459856607a646d61e64';
 	$.ajax({
-		url = "https://api.instagram.com/v1/users/self/media/recent/",
-		datatype = "jsonp",
-		type = "GET",
-		data = {access_token:access_token,count:jumlah},
+		url: 'https://api.instagram.com/v1/users/self/media/recent/',
+		datatype: 'jsonp',
+		type: 'GET',
+		data: {access_token: access_token, count: jumlah},
 		success: function(data)
 		{
 			for ( x in data.data )
 			{
-				$("ul").append("<li> <a href = '"+ data.data[x].link +"' > </a> <img src = '"+ data.data[x].images.low_resolution.url +"' > </li>")
+				$('ul').append('<li><a href="'+ data.data[x].link +'" ><img src="'+ data.data[x].images.low_resolution.url +'"></a></li>')
 			}
 		},
 		error: function(data)
