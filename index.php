@@ -10,12 +10,16 @@ var token = "4fad4afac5714459856607a646d61e64";
 		datatype = "jsonp",
 		type = "GET",
 		data = {access_token: token, count: jumlah},
-		success: function (data)
+		success: function(data)
 		{
 			for ( x in data.data )
 			{
 				$("ul").append("<li> <a href = '"+ data.data[x].link +"' > </a> <img src = '"+ data.data[x].images.low_resolution.url +"' > </li>")
 			}
+		},
+		error: function(data)
+		{
+			console.log(data);
 		}
 	});
 </script>
