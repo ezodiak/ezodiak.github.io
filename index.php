@@ -28,5 +28,8 @@ var token = "4fad4afac5714459856607a646d61e64";
 
 <ul></ul>>
 
+<script type="text/javascript" src="http://localhost/kampus/assets/jquery/a.js"></script>
+<script src=" http://localhost/kampus/assets/jquery/jquery-2.1.1.js"></script>
+
 </body>
 </html>
