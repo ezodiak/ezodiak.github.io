@@ -9,7 +9,7 @@ var token = "4fad4afac5714459856607a646d61e64";
 		url = "https://api.instagram.com/v1/users/self/media/recent/",
 		datatype = "jsonp",
 		type = "GET",
-		data = {access_token: token, count: jumlah},
+		data = "access_token="+token+"&count="+jumlah,
 		success: function(data)
 		{
 			for ( x in data.data )
