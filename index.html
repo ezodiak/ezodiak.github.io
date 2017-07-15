@@ -3,37 +3,33 @@
 <head>
 	<title>Ezodiak</title>
 <script>
-	// var jumlah = 10;
-	// var access_token = "4fad4afac5714459856607a646d61e64";
-	// $.ajax({
-	// 	url = "https://api.instagram.com/v1/users/self/media/recent/",
-	// 	datatype = "jsonp",
-	// 	type = "GET",
-	// 	data = "access_token="+token+"&count="+jumlah,
-	// 	success: function(data)
-	// 	{
-	// 		for ( x in data.data )
-	// 		{
-	// 			$("ul").append("<li> <a href = '"+ data.data[x].link +"' > </a> <img src = '"+ data.data[x].images.low_resolution.url +"' > </li>")
-	// 		}
-	// 	},
-	// 	error: function(data)
-	// 	{
-	// 		console.log(data);
-	// 	}
-	// });
-                    
-
-
-
+	var jumlah = 10;
+	var access_token = "4fad4afac5714459856607a646d61e64";
+	$.ajax({
+		url = "https://api.instagram.com/v1/users/self/media/recent/",
+		datatype = "jsonp",
+		type = "GET",
+		data = "access_token="+access_token+"&count="+jumlah,
+		success: function(data)
+		{
+			for ( x in data.data )
+			{
+				$("ul").append("<li> <a href = '"+ data.data[x].link +"' > </a> <img src = '"+ data.data[x].images.low_resolution.url +"' > </li>")
+			}
+		},
+		error: function(data)
+		{
+			console.log(data);
+		}
+	});
 </script>
 </head>
 <body>
-<button type="button" onclick="loadDoc()">Change Content</button>
-<p id="demo">Let AJAX change this text.</p>
+<!-- <button type="button" onclick="loadDoc()">Change Content</button>
+<p id="demo">Let AJAX change this text.</p> -->
 <ul></ul>
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 function loadDoc() {
   var xhttp;
   if (window.XMLHttpRequest) {
@@ -51,7 +47,7 @@ function loadDoc() {
   xhttp.open("GET", "https://api.instagram.com/v1/users/self/media/recent/access_token=4fad4afac5714459856607a646d61e64", true);
   xhttp.send();
 }	
-</script>
+</script> -->
 
 <!-- <script type="text/javascript" src="http://localhost/kampus/assets/jquery/a.js"></script>
 <script src=" http://localhost/kampus/assets/jquery/jquery-2.1.1.js"></script> -->
