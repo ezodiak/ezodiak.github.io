@@ -3,7 +3,6 @@
     header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
 	header("Access-Control-Allow-Headers", "X-Requested-With");
     header("Access-Control-Allow-Headers", "Content-Type");
-    header("Access-Control-Allow-Methods", "PUT, GET, POST, DELETE, OPTIONS");
     next();
 ?>
 <!DOCTYPE html>
@@ -16,7 +15,7 @@
 	var access_token = '4fad4afac5714459856607a646d61e64';
 	$.ajax({
 		url: 'https://api.instagram.com/v1/users/self/media/recent/',
-		datatype: 'jsonp',
+		datatype: 'json',
 		type: 'GET',
 		data: {access_token: access_token, count: jumlah},
 		success: function(data)
